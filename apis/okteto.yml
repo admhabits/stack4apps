@@ -1,0 +1,7 @@
+name: apis
+command: bash
+workdir: /app
+sync:
+  - .:/app
+forward:
+  - 8181:8181

@@ -1,0 +1,80 @@
+/*--------------------
+        Inputs
+---------------------*/
+
+.ui-input {
+  position: relative;
+  font-weight: normal;
+  font-style: normal;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+input {
+  margin: 8px;
+  max-width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  text-align: left;
+  line-height: 1.21428571em;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  padding: 0.67857143em 1em;
+  background: #FFFFFF;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 0.28571429rem;
+  -webkit-transition: box-shadow 0.1s ease, border-color 0.1s ease;
+  transition: box-shadow 0.1s ease, border-color 0.1s ease;
+  box-shadow: none;
+}
+
+/*--------------------
+      Placeholder
+---------------------*/
+
+/* browsers require these rules separate */
+
+input::-webkit-input-placeholder {
+  color: rgba(191, 191, 191, 0.87);
+}
+
+input::-moz-placeholder {
+  color: rgba(191, 191, 191, 0.87);
+}
+
+input:-ms-input-placeholder {
+  color: rgba(191, 191, 191, 0.87);
+}
+
+/*******************************
+            States
+*******************************/
+
+/*--------------------
+        Disabled
+---------------------*/
+
+input[disabled] {
+  opacity: 0.45;
+}
+
+input[disabled] {
+  pointer-events: none;
+}
+
+/*--------------------
+        Active
+---------------------*/
+
+input:active,
+input {
+  border-color: rgba(0, 0, 0, 0.3);
+  background: #FAFAFA;
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: none;
+}

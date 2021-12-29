@@ -1,0 +1,174 @@
+:root {
+	--navbar: #0e2e4e;
+	--navbar-light: #074684;
+	
+	--brand: #192734;
+	--panel: #192128;
+	--panel-light: #698aa7;
+	
+	--spacer-grey: #47535e;
+	--root-bg : #234;
+
+	--container-light: #3771;
+
+	--font-disable: bisque;
+}
+
+
+
+.header-admin {
+	top: 0;
+	left: 0;
+	
+	display: grid;
+	grid-template-columns: 200px 1fr 2fr;
+	grid-template-rows: 50px auto auto;
+
+	gap: 5px;
+
+	position: sticky;
+	background: var(--root-bg);
+
+	font-size: 12px;
+	color: white;
+	padding: 0px;
+
+	line-height: 30px;
+	font-family: sans-serif;
+	
+}
+
+/*GRID CHILD HEADER COL LINE 1 - 2*/
+
+.brand {
+	grid-column-start: 1;
+	grid-column-end: 2;
+
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+/*GRID CHILD HEADER COL LINE 2 - 3*/
+
+.spacer {
+	grid-column-start: 2;
+	grid-column-end: 3;
+
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+/*GRID CHILD HEADER COL LINE 3 - 4*/
+
+.navbar {
+	grid-column-start: 3;
+	grid-column-end: 4;
+
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+
+/*BREAKPOINT GRID TEMPLATE*/
+
+@media only screen and (max-width: 1080px){
+	.header-admin {
+		grid-template-columns: 50px 1fr 2fr;
+
+	}
+
+}
+
+@media only screen and (max-width: 968px){
+	.header-admin {
+		grid-template-columns: 50px 1fr 2fr;
+
+	}
+
+}
+
+@media only screen and (max-width: 800px){
+	.header-admin {
+		grid-template-columns: 50px 1fr 2fr;
+
+	}
+
+}
+
+@media only screen and (max-width: 768px){
+	.header-admin {
+		grid-template-columns: 50px 2fr 50px;
+	}
+
+	.header-admin > div.navbar > a, i.navbar {
+		display: none;
+	}
+
+	.header-admin > div.navbar > i.off-canvas {
+		display: flex;
+	}
+
+	div.navbar {
+		background: var(--brand);
+	}
+}
+
+@media only screen and (min-width: 768px){
+	.header-admin > div.navbar > i.off-canvas {
+		display: none;
+	}
+
+}
+
+/*BREAKPOINT GRID TEMPLATE END*/
+
+
+#slim-panel {
+	border: 0px solid #234;
+}
+
+.header-admin > .brand {
+	background: var(--brand);
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	font-size: 12px;
+	padding: 10px;
+}
+
+.header-admin > .brand > div.name-brand {
+	text-transform: uppercase;
+	font-weight: 600;
+	margin: 0 8px;
+}
+
+.header-admin > .brand > img {
+	width: 45px;
+	border-radius: 100px;
+	border: 5px solid #234;
+	background: var(--navbar-light);
+
+}
+
+.header-admin > div.spacer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.header-admin > div.navbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background: var(--navbar);
+
+}
+
+.header-admin > div.navbar > a {
+	margin: 0px 8px;
+	text-decoration: none;
+	color: ghostwhite;
+	font-size: 14px;
+}

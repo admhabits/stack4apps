@@ -1,0 +1,72 @@
+* {
+	margin: 0 0;
+	padding: 0 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow-y: inherit;
+	overflow-x: hidden;
+}
+
+@media only screen and (max-width: 920px){
+	body {
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+		scroll-behavior: smooth;
+	}
+
+	.admin-sidebar:hover {
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+		scroll-behavior: smooth;
+
+	}
+}
+
+
+.admin-sidebar {
+
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+
+}
+
+
+.admin-sidebar:hover {
+	overflow-y: hidden;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+
+}
+
+.content-admin {
+	overflow-y: hidden;
+}
+
+.content-admin:hover {
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+.footer-admin {
+
+	-webkit-overflow-scrolling: touch;
+	scroll-behavior: smooth;
+}
+
+.footer-admin:hover {
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+}
+
+
+@media only screen and (max-width: 768px){
+	.footer-admin {
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	}
+}

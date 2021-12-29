@@ -1,0 +1,72 @@
+name: stack4apps
+services:
+  mysqldb:
+    image: mysql:5.6
+    labels:
+      app: myapps
+    ports:
+      - 3306
+    resources:
+      storage: 1Gi
+    volumes:
+      - conf:/etc/mysql
+      - data:/var/lib/mysql
+      - ./backup/db/:/data_backup/data
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=api_portal
+      - MYSQL_USER=alamwibowo
+      - MYSQL_PASSWORD=P@ssword1234
+  api:
+    build: apis
+    ports:
+      - 8181
+    labels:
+      app: myapps
+    restart: unless-stopped
+    environment:
+    - DB_HOST=mysqldb
+    - DB_USER=alamwibowo
+    - DB_NAME=api_portal
+    - DB_PASS=P@ssword1234
+    - DB_PORT=3306
+    - NODE_PORT=8181
+    - NODE_ENV=development
+  myadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 80
+    labels:
+      app: myapps
+    restart: unless-stopped
+    environment:
+    - PMA_HOST=mysqldb
+    - PMA_PORT=3306
+    - MYSQL_USER=alamwibowo
+    - MYSQL_PASSWORD=P@ssword1234
+    - MYSQL_ROOT_PASSWORD=root
+  myapps:
+    build: myapps/dashboard
+    ports:
+      - 3000
+    labels:
+      app: myapps
+    restart: always
+    environment:
+    - REACT_SECRET=fweoufasdjfasdljf
+endpoints:
+  myapps:
+  - path: /
+    service: myapps
+    port: 3000
+  api:
+  - path: /
+    service: api
+    port: 8181
+  myadmin:
+  - path: /
+    service: myadmin
+    port: 80
+volumes: 
+  conf:
+  data:

@@ -1,0 +1,157 @@
+
+/*CONTAINER*/
+.master-admin {
+	display: grid;
+	grid-template-columns: 200px 1fr 2fr;
+	grid-template-rows: 50px 100vh auto;
+}
+
+
+/*ITEM ROW 1 - 4*/
+.header-admin {
+	grid-column-start: 1;
+	grid-column-end: 4;
+
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+/*ITEM ROW 2 COL 1*/
+.admin-sidebar {
+	grid-column-start: 1;
+	grid-column-end: 2;
+
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+/*ITEM ROW 2 COL 2-4*/
+.content-admin {
+	grid-column-start: 2;
+	grid-column-end: 4;
+
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+/*ITEM ROW 3 COL 1-4*/
+.footer-admin {
+	grid-column-start: 1;
+	grid-column-end: 4;
+
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+
+
+
+
+/*BREAK POINT*/
+
+@media only screen and (max-width: 1040px){
+	div.link-item, div.name-brand, div.brand > img {
+		display: none;
+	}
+
+	.header-admin > div.brand {
+		justify-content: center;
+		align-items: center;
+		padding: 8px;
+	}
+
+	.master-admin {
+		grid-template-columns: 50px 1fr 2fr;
+	}
+
+}
+
+@media only screen and (max-width: 1020px){
+	div.link-item, div.name-brand, div.brand > img {
+		display: none;
+	}
+
+	.header-admin > div.brand {
+		justify-content: center;
+		align-items: center;
+		padding: 8px;
+	}
+
+	.master-admin {
+		grid-template-columns: 50px 1fr 2fr;
+		
+	}
+
+}
+
+@media only screen and (max-width: 968px){
+	div.link-item, div.name-brand, div.brand > img {
+		display: none;
+	}
+
+	.header-admin > div.brand {
+		justify-content: center;
+		align-items: center;
+		padding: 8px;
+	}
+
+	.master-admin {
+		grid-template-columns: 50px 1fr 2fr;
+	}
+
+}
+
+
+@media only screen and (max-width: 768px){
+	div.link-item, div.name-brand, div.brand > img {
+		display: none;
+	}
+
+	.header-admin > div.brand {
+		justify-content: center;
+		align-items: center;
+		padding: 8px;
+	}
+
+	.master-admin {
+		grid-template-columns: 50px 1fr 2fr;
+		
+	}
+
+}
+
+
+@media only screen and (max-width: 568px){
+	div.link-item, div.name-brand, div.brand > img {
+		display: none;
+	}
+
+	.header-admin > div.brand {
+		justify-content: center;
+		align-items: center;
+		padding: 8px;
+	}
+
+	.master-admin {
+		grid-template-columns: 50px 1fr 2fr;
+		
+	}
+
+}
+
+@media only screen and (max-width: 468px){
+	div.link-item, div.name-brand, div.brand > img {
+		display: none;
+	}
+
+	.header-admin > div.brand {
+		justify-content: center;
+		align-items: center;
+		padding: 8px;
+	}
+
+	.master-admin {
+		grid-template-columns: 50px 1fr 2fr;
+		
+	}
+
+}
