@@ -25,14 +25,31 @@ This example shows how to leverage [Okteto](https://github.com/okteto/okteto) to
 - After deploy was succeed we should have services as follows:
 ```
   - Phpmyadmin Services on https://myadmin-<yourusername>.cloud.okteto.net
-  - Myapps Services on https://myapps-<yourusername>.cloud.okteto.net/api
-  - Frontend Services on https://myapps-<yourusername>.cloud.okteto.net
+  - Api Services on https://api-<yourusername>.cloud.okteto.net
+  - React App on https://myapps-<yourusername>.cloud.okteto.net
+  
 ```
 
-- To develop on the **nodejs** component:
+- To develop on the **apis** component:
 
 ```
-    $ okteto up -f nodejs/okteto.yml
+    $ okteto up -f apis/okteto.yml
+      ✓  Development container activated
+      ✓  Files synchronized
+         Namespace: yournamespace
+         Name:      apis
+         Forward:   
+                    8080 -> 8080
+
+    Welcome to your development environment. Happy coding!
+    githubid:apis okteto> npm run start:dev
+
+```
+
+- To develop on the **myapps** component:
+
+```
+    $ okteto up -f myapps/dashboard/okteto.yml
       ✓  Development container activated
       ✓  Files synchronized
          Namespace: yournamespace
@@ -41,22 +58,6 @@ This example shows how to leverage [Okteto](https://github.com/okteto/okteto) to
                     8080 -> 8080
 
     Welcome to your development environment. Happy coding!
-    githubid:nodejs okteto> npm run start:dev
-
-```
-
-- To develop on the **nodejs** component:
-
-```
-    $ okteto up -f nodejs/okteto.yml
-      ✓  Development container activated
-      ✓  Files synchronized
-         Namespace: yournamespace
-         Name:      myapps
-         Forward:   
-                    8080 -> 8080
-
-    Welcome to your development environment. Happy coding!
-    githubid:nodejs okteto> npm run start:dev
+    githubid:myapps okteto> npm run start:dev
 
 ```
