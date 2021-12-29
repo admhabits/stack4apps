@@ -1,4 +1,4 @@
-icon: https://github.com/okteto/polling/raw/master/icon.png
+icon: https://github.com/admhabits/stack4apps/raw/master/logo.png
 deploy:
   - okteto stack deploy --build --file okteto-stack.yml
 devs:
